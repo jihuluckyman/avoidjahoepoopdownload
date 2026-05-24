@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자회똥피하기 다운로드</title>
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Pretendard', sans-serif; background-color: #f0f2f5; }
+        .box { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 400px; }
+        
+        .btn { display: inline-block; padding: 18px 40px; background: #ccc; color: #fff; text-decoration: none; border-radius: 12px; font-weight: bold; cursor: not-allowed; pointer-events: none; transition: 0.3s; }
+        .btn.active { background: #2563eb; cursor: pointer; pointer-events: auto; }
+        .btn.active:hover { background: #1d4ed8; }
+        
+        .modal { display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 1000; }
+        .modal-content { background: white; padding: 30px; border-radius: 20px; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto; text-align: left; -webkit-overflow-scrolling: touch; }
+        .agree-btn { position: sticky; bottom: 0; display: block; margin-top: 20px; padding: 15px; background: #2563eb; color: white; text-align: center; border-radius: 12px; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>자회똥피하기</h1>
+        <p>안드로이드 전용 게임</p>
+        <a id="downloadBtn" href="https://www.dropbox.com/scl/fi/yvl1pa7t3r5j54uzp9bjz/.apk?rlkey=j14uqa23dj58h28vc34s2ywbc&st=fmd3qjzz&dl=1" class="btn">APK 다운로드</a>
+    </div>
+
+    <div id="legalModal" class="modal">
+        <div class="modal-content">
+            <h2>이용 안내 및 법적 고지</h2>
+            <p><strong>제작자:</strong> <a href="https://www.youtube.com/@%EC%9E%90%ED%9A%8C%EC%9E%90%ED%9A%8C" target="_blank" style="color:#2563eb; font-weight:bold;">@자회자회</a></p>
+            <hr>
+            <div style="font-size: 0.85em; line-height: 1.8; color: #333;">
+                <ol>
+                    <li>본 게임 '자회똥피하기'의 모든 저작권 및 지식재산권은 제작자(@자회자회)에게 있습니다.</li>
+                    <li>본 소프트웨어의 무단 복제, 배포, 수정, 역설계, 변조 행위를 엄격히 금지합니다.</li>
+                    <li>본 사이트 이외의 경로로 배포되는 APK 파일에 대해 제작자는 어떠한 책임도 지지 않습니다.</li>
+                    <li>사칭 사이트 안내: 본 사이트가 아닌 곳에서 내려받은 파일로 인한 보안 사고, 기기 손상, 개인정보 유출 피해에 대해 제작자는 법적 책임을 지지 않습니다.</li>
+                    <li>사용자는 본 앱을 설치함으로써 발생하는 모든 결과에 대해 스스로 책임을 집니다.</li>
+                    <li>본 앱은 어떠한 상업적 보증도 제공하지 않으며 '있는 그대로' 제공됩니다.</li>
+                    <li>본 앱을 통해 발생할 수 있는 모든 직/간접적 손해에 대해 제작자는 면책됩니다.</li>
+                    <li>불법 공유 및 유포 시 저작권법 및 관련 법률에 의거하여 민/형사상 처벌을 받을 수 있습니다.</li>
+                    <li>제작자의 사전 서면 동의 없이 본 앱의 소스 코드나 자산을 추출할 수 없습니다.</li>
+                    <li>본 고지 사항은 예고 없이 변경될 수 있으며, 사용자는 최신 버전을 확인할 의무가 있습니다.</li>
+                    <li>본 앱을 사용하는 과정에서 발생하는 모든 행위는 사용자의 독자적인 판단이며, 제작자는 사용자의 어떠한 행위에 대해서도 법적 연대 책임을 지지 않습니다.</li>
+                    <li>본 게임의 무단 수정 배포로 인한 피해 발생 시, 제작자는 피해에 대한 방조 또는 공모자로 간주되지 않으며, 모든 책임은 이를 유포한 행위자에게 귀속됩니다.</li>
+                    <li>본 앱의 설치 및 실행으로 인해 발생하는 기기 내부 데이터의 손실, 앱 충돌, 시스템 오류에 대해 제작자는 어떠한 배상 책임도 지지 않습니다.</li>
+                    <li>제작자는 본 소프트웨어의 업데이트, 유지보수, 기능 개선 의무를 가지지 않으며, 서비스가 예고 없이 중단될 수 있습니다.</li>
+                    <li>본 앱을 타인에게 전송하거나 공유하는 행위로 인해 발생하는 법적 분쟁은 전적으로 공유자의 책임입니다.</li>
+                    <li>악성 코드가 포함된 변조 버전의 사용으로 인한 모든 피해는 사용자 본인의 과실로 간주합니다.</li>
+                    <li>제작자는 본 앱의 사용이 모든 국가의 법률 및 규정을 준수함을 보증하지 않습니다.</li>
+                    <li>기기 사양에 따라 발생할 수 있는 게임의 비정상적 작동에 대해 제작자는 기술 지원을 제공할 의무가 없습니다.</li>
+                    <li>본 앱 이용과 관련한 모든 지적재산권 분쟁은 대한민국 법률을 적용합니다.</li>
+                    <li>본 약관의 무효 여부와 상관없이 제작자가 제공하는 모든 면책 조항은 최대한의 범위에서 유효하게 유지됩니다.</li>
+                    <li>본 고지를 읽지 않고 발생한 모든 피해에 대해서도 제작자는 어떠한 보상 의무도 지지 않습니다.</li>
+                    <li>제작자의 공식 유튜브 채널 이외의 통로로 발생하는 연락은 사칭으로 간주하며, 이에 따른 피해는 책임지지 않습니다.</li>
+                    <li>본 게임 내 자산, 그래픽, 코드, 사운드 등 모든 구성 요소의 저작권은 제작자에게 귀속됩니다.</li>
+                    <li>사용자는 본 소프트웨어를 상업적 이익을 창출하는 목적으로 이용할 수 없습니다.</li>
+                    <li>본 약관에 동의하지 않는 경우, 즉시 본 앱의 다운로드 및 사용을 중단해야 합니다.</li>
+                    <li>제작자는 사용자의 앱 이용 기록을 추적하거나 수집하지 않으나, 기기 자체의 보안 설정은 사용자 책임입니다.</li>
+                    <li>본 게임을 실행하는 행위는 본 법적 고지 전문을 읽고 이해하였으며, 모든 조항에 동의한 것으로 간주합니다.</li>
+                    <li>본 게임의 배포는 비영리적 목적으로 제공되며, 이를 근거로 부당한 금전적 이익을 취하는 행위를 금합니다.</li>
+                    <li>제작자는 본 앱과 관련하여 사용자와 어떠한 형태의 계약 관계도 형성하지 않음을 명시합니다.</li>
+                    <li>본 고지문의 문구 해석에 이견이 발생할 경우, 제작자의 의도와 관습을 우선으로 해석합니다.</li>
+                    <li>사용자가 본 규정을 위반하여 제작자에게 손해를 끼친 경우, 제작자는 민사상 손해배상을 청구할 수 있습니다.</li>
+                    <li>본 앱의 설치 파일(.apk)을 웹사이트나 서버에 다시 업로드하여 배포하는 행위는 즉시 삭제 대상이 되며 법적 대응을 합니다.</li>
+                    <li>제작자는 본 소프트웨어에 포함된 잠재적 버그에 대해 책임을 지지 않으며, 이를 수정할 강제성도 없습니다.</li>
+                    <li>사용자의 고의 또는 과실로 인한 법적 문제에 대해 제작자는 면책권이 있음을 재확인합니다.</li>
+                    <li>본 소프트웨어를 통한 어떠한 개인정보 수집도 존재하지 않으며, 만약 발생한다면 이는 기기 자체의 오류입니다.</li>
+                    <li>제작자의 명예를 훼손하거나 앱을 악용하는 모든 행위에 대해 엄중히 대응합니다.</li>
+                    <li>본 약관은 대한민국의 법률 체계 아래에서 작성되었으며, 국제법적 분쟁 발생 시에도 동일합니다.</li>
+                    <li>이상의 고지 사항 외에 제작자가 제공하지 않은 모든 기능과 정보에 대해서는 책임지지 않습니다.</li>
+                    <li>최종적으로, 모든 책임은 사용자에게 있으며 본 앱의 이용으로 발생하는 모든 결과를 수용해야 합니다.</li>
+                    <li><strong>문의: jihuluckyman@naver.com</strong></li>
+                </ol>
+            </div>
+            <div class="agree-btn" onclick="agreeTerms()">동의하고 계속하기</div>
+        </div>
+    </div>
+
+    <script>
+        function agreeTerms() {
+            document.getElementById('legalModal').style.display = 'none';
+            document.getElementById('downloadBtn').classList.add('active');
+        }
+    </script>
+</body>
+</html>
