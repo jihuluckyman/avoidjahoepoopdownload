@@ -8,9 +8,17 @@
         body { margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Pretendard', sans-serif; background-color: #f0f2f5; }
         .box { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; width: 90%; max-width: 400px; }
         
-        .btn { display: inline-block; padding: 18px 40px; background: #ccc; color: #fff; text-decoration: none; border-radius: 12px; font-weight: bold; cursor: not-allowed; pointer-events: none; transition: 0.3s; }
-        .btn.active { background: #2563eb; cursor: pointer; pointer-events: auto; }
-        .btn.active:hover { background: #1d4ed8; }
+        /* 버튼 공통 스타일 */
+        .btn { display: block; padding: 18px 0; margin-bottom: 15px; border-radius: 12px; font-weight: bold; text-decoration: none; transition: 0.3s; }
+        
+        /* 다운로드 버튼 (비활성화 상태) */
+        .download-btn { background: #ccc; color: #fff; cursor: not-allowed; pointer-events: none; }
+        .download-btn.active { background: #2563eb; color: #fff; cursor: pointer; pointer-events: auto; }
+        .download-btn.active:hover { background: #1d4ed8; }
+        
+        /* 웹 플레이 버튼 */
+        .web-btn { background: #f3f4f6; color: #374151; border: 1px solid #e5e7eb; }
+        .web-btn:hover { background: #e5e7eb; }
         
         .modal { display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 1000; }
         .modal-content { background: white; padding: 30px; border-radius: 20px; width: 90%; max-width: 600px; max-height: 80vh; overflow-y: auto; text-align: left; -webkit-overflow-scrolling: touch; }
@@ -22,9 +30,15 @@
     <div class="box">
         <h1>자회똥피하기</h1>
         <p>안드로이드 전용 게임</p>
-        <a id="downloadBtn" href="https://www.dropbox.com/scl/fi/yvl1pa7t3r5j54uzp9bjz/.apk?rlkey=j14uqa23dj58h28vc34s2ywbc&st=fmd3qjzz&dl=1" class="btn">APK 다운로드</a>
+        
+        <!-- APK 다운로드 버튼 -->
+        <a id="downloadBtn" href="https://www.dropbox.com/scl/fi/yvl1pa7t3r5j54uzp9bjz/.apk?rlkey=j14uqa23dj58h28vc34s2ywbc&st=fmd3qjzz&dl=1" class="btn download-btn">APK 다운로드</a>
+        
+        <!-- 웹 플레이 버튼 -->
+        <a href="https://jihuluckyman.github.io/avoidjahoepoop/" class="btn web-btn">PC에서 플레이 (Web)</a>
     </div>
 
+    <!-- 법적 고지 모달 -->
     <div id="legalModal" class="modal">
         <div class="modal-content">
             <h2>이용 안내 및 법적 고지</h2>
